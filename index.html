@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Веб-студия</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  nav {
+    background-color: #444;
+    padding: 10px 0;
+    text-align: center;
+  }
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  nav ul li {
+    display: inline;
+    margin-right: 10px;
+  }
+  nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 10px;
+    transition: all 0.3s ease;
+  }
+  nav ul li a:hover {
+    background-color: #555;
+  }
+  section {
+    margin: 20px;
+    padding: 50px;
+    background-color: #f9f9f9;
+    margin-bottom: 20px;
+  }
+  h1 {
+    color: #333;
+  }
+  p {
+    color: #666;
+  }
+  #menu {
+    background-color: #999;
+    margin: 10px;
+    padding: 10px;
+    width: 100%;
+  }
+  #menu a {
+    color: #fff;
+    margin-right: 10px;
+    text-decoration: none;
+  }
+  /* Стили для блоков */
+  .block {
+    padding: 20px;
+    margin: 20px;
+    border: 1px solid #ccc;
+    height: 200px;
+  }
+</style>
+</head>
+<body>
+
+<nav id="menu">
+  <a href="#hero">home</a>
+  <a href="#about">about</a>
+  <a href="#services">services</a>
+  <a href="#portfolio">portfolio</a>
+  <a href="#contacts">contacts</a>
+</nav>
+
+<section id="hero" class="block">
+  <h1>Web Studio</h1>
+  <h2>Slogan ...</h2>
+  <p>Welcome to our web studio. We create beautiful and functional websites.</p>
+</section>
+
+<section id="about" class="block">
+  <h2>About Us</h2>
+  <p>We are a team of passionate web developers and designers.</p>
+</section>
+
+<section id="services" class="block">
+  <h2>Our Services</h2>
+  <p>We offer a wide range of web development and design services.</p>
+</section>
+
+<section id="portfolio" class="block">
+  <h2>Portfolio</h2>
+  <p>Check out some of our latest projects.</p>
+</section>
+
+<section id="contacts" class="block">
+  <h2>Contact Us</h2>
+  <p>Get in touch with us to discuss your project.</p>
+</section>
+
+<footer>
+  <p style="text-align:center">© 2024 https://artcode.com.ua - разработка сайтов, продвижение и реклама</p>
+</footer>
+
+<script>
+  document.querySelectorAll('nav a').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      e.preventDefault();
+
+      const targetId = this.getAttribute('href').substring(1);
+      const targetSection = document.getElementById(targetId);
+
+      window.scrollTo({
+        top: targetSection.offsetTop,
+        behavior: 'smooth'
+      });
+    });
+  });
+</script>
+    
+<script>
+// Функция для обновления заголовка страницы
+function updateTitle(title) {
+  document.title = title + " - Веб-студия";
+}
+
+// Функция для обновления URL и заголовка страницы
+function navigateToBlock(blockId, title) {
+  history.pushState({ blockId: blockId }, title, "#" + blockId);
+  updateTitle(title);
+}
+
+// Обработчик события при загрузке страницы
+window.onload = function() {
+  // Проверяем начальное состояние и обновляем заголовок
+  if (window.location.hash) {
+    var blockId = window.location.hash.substring(1);
+    var block = document.getElementById(blockId);
+    if (block) {
+      updateTitle(block.querySelector("h2").innerText);
+    }
+  }
+};
+
+// Добавляем обработчики событий для навигации по блокам
+document.querySelectorAll("#menu a").forEach(function(link) {
+  link.addEventListener("click", function(event) {
+    var blockId = this.getAttribute("href").substring(1);
+    var title = document.getElementById(blockId).querySelector("h2").innerText;
+    navigateToBlock(blockId, title);
+    event.preventDefault(); // Предотвращаем стандартное поведение ссылки
+  });
+});
+</script>
+
+</body>
+</html>
