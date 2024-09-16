@@ -1,160 +1,166 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Веб-студия</title>
-<style>
-  body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-  }
-  nav {
-    background-color: #444;
-    padding: 10px 0;
-    text-align: center;
-  }
-  nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-  }
-  nav ul li {
-    display: inline;
-    margin-right: 10px;
-  }
-  nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    padding: 5px 10px;
-    transition: all 0.3s ease;
-  }
-  nav ul li a:hover {
-    background-color: #555;
-  }
-  section {
-    margin: 20px;
-    padding: 50px;
-    background-color: #f9f9f9;
-    margin-bottom: 20px;
-  }
-  h1 {
-    color: #333;
-  }
-  p {
-    color: #666;
-  }
-  #menu {
-    background-color: #999;
-    margin: 10px;
-    padding: 10px;
-    width: 100%;
-  }
-  #menu a {
-    color: #fff;
-    margin-right: 10px;
-    text-decoration: none;
-  }
-  /* Стили для блоков */
-  .block {
-    padding: 20px;
-    margin: 20px;
-    border: 1px solid #ccc;
-    height: 200px;
-  }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Навигация с разделителями точками и активными секциями</title>
+    <!-- Подключаем шрифт Roboto -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        /* Общие стили */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Стили навигации */
+        .nav-wrapper {
+            display: flex;
+            justify-content: center; /* Центрирование меню по горизонтали */
+            padding: 20px 0;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: #fff;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav {
+            list-style: none;
+            padding: 0;
+            display: flex;
+        }
+
+        .nav li {
+            margin-right: 10px;
+        }
+
+        .nav li:not(:first-child)::before {
+            content: "•";
+            margin-right: 10px;
+        }
+
+        .nav a {
+            text-decoration: none;
+            color: #333;
+            padding: 10px 15px;
+            display: inline-block;
+            font-weight: 500; /* Средняя толщина */
+            transition: background-color 0.3s ease;
+        }
+
+        .nav a:hover {
+            background-color: #f0f0f0;
+            border-radius: 5px;
+        }
+
+        .nav a.active {
+            background-color: #007bff;
+            color: white;
+            border-radius: 5px;
+        }
+
+        /* Стили секций */
+        .section {
+            height: 100vh;
+            padding: 50px;
+            margin-top: 60px; /* Для корректной прокрутки с учетом фиксированного меню */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2rem;
+        }
+
+        #section1 { background-color: #ffcccc; }
+        #section2 { background-color: #cce5ff; }
+        #section3 { background-color: #d4edda; }
+        #section4 { background-color: #fff3cd; }
+        #section5 { background-color: #f8d7da; }
+    </style>
 </head>
 <body>
+    <!-- Навигация -->
+    <div class="nav-wrapper">
+        <ul class="nav">
+            <li><a href="#section1" class="active">Секция 1</a></li>
+            <li><a href="#section2">Секция 2</a></li>
+            <li><a href="#section3">Секция 3</a></li>
+            <li><a href="#section4">Секция 4</a></li>
+            <li><a href="#section5">Секция 5</a></li>
+        </ul>
+    </div>
 
-<nav id="menu">
-  <a href="#hero">home</a>
-  <a href="#about">about</a>
-  <a href="#services">services</a>
-  <a href="#portfolio">portfolio</a>
-  <a href="#contacts">contacts</a>
-</nav>
+    <!-- Секции -->
+    <div id="section1" class="section">Секция 1</div>
+    <div id="section2" class="section">Секция 2</div>
+    <div id="section3" class="section">Секция 3</div>
+    <div id="section4" class="section">Секция 4</div>
+    <div id="section5" class="section">Секция 5</div>
 
-<section id="hero" class="block">
-  <h1>Web Studio</h1>
-  <h2>Slogan ...</h2>
-  <p>Welcome to our web studio. We create beautiful and functional websites.</p>
-</section>
+    <footer>
+       <p>
+            <a href="#section1">Секция 1</a> |
+            <a href="#section2">Секция 2</a> |
+            <a href="#section3">Секция 3</a> |
+            <a href="#section4">Секция 4</a> |
+            <a href="#section5">Секция 5</a>
+       </p>
 
-<section id="about" class="block">
-  <h2>About Us</h2>
-  <p>We are a team of passionate web developers and designers.</p>
-</section>
+       <p>© 2024 Мой Сайт. Все права защищены.</p>
+    </footer>
 
-<section id="services" class="block">
-  <h2>Our Services</h2>
-  <p>We offer a wide range of web development and design services.</p>
-</section>
+    <!-- Скрипт для изменения активного пункта меню при прокрутке и изменения URL -->
+    <script>
+        // Получаем все ссылки меню
+        const menuLinks = document.querySelectorAll('.nav a');
+        // Получаем все секции
+        const sections = document.querySelectorAll('.section');
 
-<section id="portfolio" class="block">
-  <h2>Portfolio</h2>
-  <p>Check out some of our latest projects.</p>
-</section>
+        // Функция для удаления класса "active" у всех ссылок меню
+        function removeActiveClasses() {
+            menuLinks.forEach(link => link.classList.remove('active'));
+        }
 
-<section id="contacts" class="block">
-  <h2>Contact Us</h2>
-  <p>Get in touch with us to discuss your project.</p>
-</section>
+        // Функция для добавления класса "active" к ссылке, связанной с текущей секцией
+        function setActiveMenuLink() {
+            let index = sections.length;
 
-<footer>
-  <p style="text-align:center">© 2024 https://artcode.com.ua - разработка сайтов, продвижение и реклама</p>
-</footer>
+            // Проходим по каждой секции и проверяем, какая находится в зоне видимости
+            while (--index && window.scrollY + 50 < sections[index].offsetTop) {}
 
-<script>
-  document.querySelectorAll('nav a').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-      e.preventDefault();
+            removeActiveClasses(); // Убираем активные классы
+            menuLinks[index].classList.add('active'); // Добавляем класс активной ссылке
 
-      const targetId = this.getAttribute('href').substring(1);
-      const targetSection = document.getElementById(targetId);
+            // Меняем URL в строке браузера
+            const currentSectionId = sections[index].getAttribute('id');
+            history.replaceState(null, null, `#${currentSectionId}`);
+        }
 
-      window.scrollTo({
-        top: targetSection.offsetTop,
-        behavior: 'smooth'
-      });
-    });
-  });
-</script>
-    
-<script>
-// Функция для обновления заголовка страницы
-function updateTitle(title) {
-  document.title = title + " - Веб-студия";
-}
+        // Добавляем обработчик события прокрутки
+        window.addEventListener('scroll', setActiveMenuLink);
 
-// Функция для обновления URL и заголовка страницы
-function navigateToBlock(blockId, title) {
-  history.pushState({ blockId: blockId }, title, "#" + blockId);
-  updateTitle(title);
-}
+        // Обрабатываем клики по меню для перехода к секциям
+        menuLinks.forEach(link => {
+            link.addEventListener('click', function (e) {
+                e.preventDefault(); // Отменяем стандартное поведение ссылки
+                const targetId = this.getAttribute('href').substring(1);
+                const targetSection = document.getElementById(targetId);
 
-// Обработчик события при загрузке страницы
-window.onload = function() {
-  // Проверяем начальное состояние и обновляем заголовок
-  if (window.location.hash) {
-    var blockId = window.location.hash.substring(1);
-    var block = document.getElementById(blockId);
-    if (block) {
-      updateTitle(block.querySelector("h2").innerText);
-    }
-  }
-};
+                window.scrollTo({
+                    top: targetSection.offsetTop - 50, // Прокрутка с учетом высоты фиксированного меню
+                    behavior: 'smooth' // Плавная прокрутка
+                });
 
-// Добавляем обработчики событий для навигации по блокам
-document.querySelectorAll("#menu a").forEach(function(link) {
-  link.addEventListener("click", function(event) {
-    var blockId = this.getAttribute("href").substring(1);
-    var title = document.getElementById(blockId).querySelector("h2").innerText;
-    navigateToBlock(blockId, title);
-    event.preventDefault(); // Предотвращаем стандартное поведение ссылки
-  });
-});
-</script>
+                removeActiveClasses();
+                this.classList.add('active'); // Делаем кликнутую ссылку активной
 
+                // Меняем URL в строке браузера
+                history.pushState(null, null, `#${targetId}`);
+            });
+        });
+    </script>
 </body>
 </html>
+
