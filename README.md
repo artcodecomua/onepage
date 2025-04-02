@@ -5,7 +5,7 @@
 
 <h2>Шаблоны одностраничников</h2>
 
-<p>Базовый шаблон одностраничника https://artcodecomua.github.io/onepage/01/index.html - типичный шаблон, минимальная верстка.</p>
+<p>Базовый шаблон одностраничника https://artcodecomua.github.io/onepage/01 - типичный шаблон, минимальная верстка.</p>
 
 <p>Шаблон одностраничника ... https://artcodecomua.github.io/onepage/02 ...</p>
 
