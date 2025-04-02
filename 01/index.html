@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Услуги предпринимателя</title>
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Подключаем Font Awesome через CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <script defer src="script.js"></script>
+</head>
+<body>
+  <header class="hero">
+    <div class="container">
+      <h1>Профессиональные услуги</h1>
+      <p>Лучшее качество и индивидуальный подход</p>
+      <a href="#contact" class="btn">Связаться</a>
+    </div>
+  </header>
+    
+  <section id="about" class="fade-in">
+    <div class="container">
+      <h2>Обо мне</h2>
+      <p>Я — предприниматель с многолетним опытом в предоставлении качественных услуг.</p>
+      <p>Моя цель — помочь клиентам решать их задачи с максимальной эффективностью и вниманием к деталям.</p>
+      <p>Предлагаю индивидуальный подход, высокое качество работы и гарантию на результат.</p>
+    </div>
+  </section>
+
+  <section class="fade-in">
+    <div class="container section-flex">
+      <div class="text-block">
+        <h2>Почему выбирают меня?</h2>
+        <p>Большой опыт работы, профессиональный подход и лучшие материалы делают мои услуги одними из лучших на рынке.</p>
+      </div>
+      <div class="image-block">
+        <img src="https://picsum.photos/600/400/?random" alt="Профессиональные услуги">
+<!--    <img src="https://source.unsplash.com/600x400/?consultation,client" alt="Профессиональные услуги"> -->
+      </div>
+    </div>
+  </section>
+
+  <section class="fade-in">
+    <div class="container section-flex" style="flex-direction: row-reverse;">
+      <div class="text-block">
+        <h2>Индивидуальный подход</h2>
+        <p>Я учитываю пожелания клиентов и предлагаю оптимальные решения, подходящие именно вам.</p>
+      </div>
+      <div class="image-block">
+        <img src="https://picsum.photos/600/400/?business,teamwork" alt="Индивидуальный подход">
+<!--    <img src="https://source.unsplash.com/600x400/?business,teamwork" alt="Индивидуальный подход"> -->
+      </div>
+    </div>
+  </section>
+    
+  <section id="work" class="fade-in">
+    <div class="container">
+      <h2>Этапы работы</h2>
+      <div class="work-process">
+        <div class="card">
+          <h3>Этап 1</h3>
+          <p>Первый этап</p>
+        </div>
+        <div class="card">
+          <h3>Этап 2</h3>
+          <p>Второй этап</p>
+        </div>
+        <div class="card">
+          <h3>Этап 3</h3>
+          <p>Третий этап</p>
+        </div>
+      </div>
+    </div>
+  </section>
+    
+  <section id="faq" class="fade-in">
+    <div class="container">
+      <h2>Часто задаваемые вопросы</h2>
+      <!-- Вопрос 1 -->
+      <details class="faq-item">
+        <summary class="faq-question"><i class="fas fa-question-circle"></i> Как заказать услугу?</summary>
+        <div class="faq-answer">
+           Для того чтобы заказать услугу, просто перейдите на страницу с описанием услуги, заполните форму или свяжитесь с нами по телефону.
+        </div>
+      </details>
+
+      <!-- Вопрос 2 -->
+      <details class="faq-item">
+        <summary class="faq-question"><i class="fas fa-question-circle"></i> Какую гарантию я получаю на услугу?</summary>
+        <div class="faq-answer">
+          Мы предоставляем гарантию на все наши услуги в течение 6 месяцев. Если возникнут проблемы, мы оперативно их устраним.
+        </div>
+      </details>
+
+      <!-- Вопрос 3 -->
+      <details class="faq-item">
+        <summary class="faq-question"><i class="fas fa-question-circle"></i> Как связаться с вами?</summary>
+        <div class="faq-answer">
+          Вы можете связаться с нами по телефону, через email или через форму на сайте. Все способы связи доступны в разделе "Контакты".
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <section id="contact" class="fade-in">
+    <div class="container">
+      <h2>Контакты</h2>
+      <p>Телефон: <i class="fas fa-phone-alt"></i> <a href="tel:+380123456789">+38(012)345-67-89</a></p>
+      
+      <p class="messengers">
+        <a href="https://wa.me/380123456789" target="_blank" class="whatsapp"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://t.me/yourusername" target="_blank" class="telegram"><i class="fab fa-telegram-plane"></i></a>
+        <a href="viber://chat?number=%2B380123456789" target="_blank" class="viber"><i class="fab fa-viber"></i></a>
+      </p>
+      
+      <p><address>Адрес: ул.Сумская, 1, Харьков</address>
+        <i class="fas fa-map-marker-alt"></i>
+        <a href="https://www.google.com/maps?q=Адрес: ул.Сумская, 1, Харьков" target="_blank" title="Посмотреть на карте">Посмотреть на карте</a>
+      </p>
+      <p>Email: <i class="fas fa-envelope"></i> <a href="mailto:info@example.com?subject=Вопрос о услуге&body=Добрый день, у меня есть вопрос: ..." class="email-link">info@example.com</a></p>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Услуги предпринимателя</p>
+      <div class="socials">
+        <a href="#" class="social-icon facebook" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="social-icon instagram" title="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="social-icon telegram" title="Telegram"><i class="fab fa-telegram-plane"></i></a>
+      </div>
+    </div>
+  </footer>
+    
+</body>
+</html>

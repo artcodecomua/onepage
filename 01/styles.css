@@ -1,0 +1,381 @@
+        body {
+            font-family: 'Roboto', sans-serif;
+            font-size: 18px;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background: #f9f9f9;
+            color: #333;
+        }
+        .container {
+            width: calc(100% - 10px);
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0;
+            text-align: center;
+        }
+        .hero {        
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://source.unsplash.com/1600x900/?business,office') no-repeat center/cover;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://picsum.photos/1600/900/?random') no-repeat center/cover;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('cofe.jpg') no-repeat center/cover;
+/*            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://via.placeholder.com/1600x900.png?text=Your+Image+Here') no-repeat center/cover;            color: white; */
+            padding: 80px 20px;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 3em;
+            margin: 0;
+            color: #fff;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+        }
+        .hero p {
+            font-size: 1.2em;
+            color: #ccc;
+            margin-top: 10px;
+        }
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            background: #ff4b5c;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: 0.3s;
+            font-size: 1.1em;
+        }
+        .btn:hover {
+            background: #e04352;
+        }
+
+/*
+        h2 {
+            font-size: 2em;
+        }
+*/
+
+        section {
+            padding: 60px 20px;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease-out;
+        }
+        section.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .section-flex {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+            text-align: left;
+        }
+        .text-block, .image-block {
+            flex: 1;
+            min-width: 300px;
+        }
+        .image-block img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        @media (max-width: 768px) {
+            .section-flex {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+        
+      .work-process {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        gap: 20px;
+        padding: 50px 0;
+      }
+  
+      .work-process .card {
+        flex: 1;
+        border-radius: 10px;
+        background-color: #fff;
+        padding: 20px;
+        text-align: center;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+
+        footer {
+            background: #222;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        .socials a {
+            color: white;
+            margin: 0 10px;
+            text-decoration: none;
+            font-size: 1.2em;
+        }
+
+/* Общие стили для секции FAQ */
+#faq {
+    background-color: #f4f7f6; /* Светлый фон */
+    padding: 40px 20px;
+    font-family: 'Roboto', sans-serif;
+}
+
+/*
+#faq .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+*/
+
+/*
+#faq h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 30px;
+    font-weight: 700;
+}
+*/
+
+/* Стили для каждого блока с вопросом */
+.faq-item {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    padding: 15px;
+    transition: box-shadow 0.3s ease;
+}
+
+.faq-item:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Вопрос */
+.faq-question {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 10px 0;
+    transition: color 0.3s ease;
+}
+
+.faq-question:hover {
+    color: #007bff; /* Синий цвет при наведении */
+}
+
+.faq-question i {
+    margin-right: 10px;
+    color: #4CAF50; /* Зеленый цвет иконки */
+}
+
+/* Ответ */
+.faq-answer {
+    font-size: 16px;
+    color: #666;
+    padding: 10px 0;
+    line-height: 1.5;
+}
+
+/* Стили для раскрытого контента */
+details[open] .faq-answer {
+    padding: 10px 0;
+}
+
+details summary::-webkit-details-marker {
+    display: none; /* Убираем стандартный маркер браузера */
+}
+
+details summary {
+    list-style-type: none; /* Убираем стандартное подчеркивание и маркеры */
+}
+
+details[open] .faq-question {
+    color: #007bff; /* Меняем цвет вопроса при открытии */
+}
+
+details[open] .faq-answer {
+    display: block;
+}
+
+
+/* Общие стили для секции Контакты */
+#contact {
+    background-color: #f8f9fa; /* Светлый фон для секции */
+    padding: 40px 20px;
+    font-family: 'Roboto', sans-serif;
+}
+
+#contact .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#contact h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 30px;
+    font-weight: 700;
+}
+
+/* Стиль для каждого параграфа (контактной информации) */
+#contact p {
+    font-size: 18px;
+    color: #333;
+    line-height: 1.6;
+    margin: 20px 0;
+}
+
+/* Стиль для иконки телефона */
+#contact i.fas.fa-phone-alt {
+    color: #4CAF50; /* Зеленый для иконки телефона */
+    margin-right: 10px; /* Отступ справа */
+}
+
+/* Стиль для ссылки с номером телефона */
+#contact a[href^="tel:"] {
+    color: #007bff; /* Синий цвет для номера телефона */
+    text-decoration: none; /* Убираем подчеркивание */
+    font-weight: 600;
+    transition: color 0.3s ease; /* Плавный переход цвета */
+}
+
+#contact a[href^="tel:"]:hover {
+    color: #0056b3; /* Темно-синий цвет при наведении */
+}
+
+/* Иконка email */
+#contact i.fas.fa-envelope {
+    color: #007bff; /* Розовый для иконки email */
+}
+
+/* Стили для ссылки email (когда наведено) */
+.email-link {
+    color: #007bff; /* Розовый цвет для email ссылки */
+    text-decoration: none; /* Убираем подчеркивание */
+    font-weight: 600;
+}
+
+.email-link:hover {
+    color: #0056b3;
+}
+
+/* Стиль для иконки адреса */
+#contact i.fas.fa-map-marker-alt {
+    color: #e53935; /* Красный цвет для иконки (как метка на Google Maps) */
+    margin-right: 10px; /* Отступ справа */
+}
+
+/* Стиль для адреса */
+#contact address {
+    color: #4CAF50; /* Зеленый цвет для текста адреса */
+    font-style: normal; /* Убираем курсив */
+    display: inline-block;
+    margin-right: 10px;
+}
+
+/* Стиль для ссылки "Посмотреть на карте" */
+#contact a[href^="https://www.google.com/maps"] {
+    color: #e53935; /* Красный цвет для ссылки */
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease; /* Плавный переход цвета */
+}
+
+#contact a[href^="https://www.google.com/maps"]:hover {
+    color: #c62828; /* Темный красный при наведении */
+}
+
+/* Убираем подчеркивание ссылок */
+.messengers a {
+  text-decoration: none;
+}
+
+/* Стили для иконок мессенджеров */
+.messengers a i {
+  font-size: 32px; /* Увеличиваем размер иконок */
+  margin-right: 20px; /* Расстояние между иконками */
+  transition: transform 0.3s ease; /* Плавное изменение масштаба при наведении */
+}
+
+/* Цвета для иконок мессенджеров */
+.messengers a.whatsapp i {
+  color: #25D366; /* Зеленый для WhatsApp */
+}
+
+.messengers a.telegram i {
+  color: #0088cc; /* Синий для Telegram */
+}
+
+.messengers a.viber i {
+  color: #652C90; /* Фиолетовый для Viber */
+}
+
+/* Эффект при наведении на иконки */
+.messengers a:hover i {
+  transform: scale(1.1); /* Увеличиваем иконки при наведении */
+}
+
+
+/* Общие стили для футера */
+footer {
+    background-color: #333; /* Темный фон для футера */
+    color: #fff; /* Белый текст */
+    padding: 30px 0;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+}
+
+footer .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Стили для текста в футере */
+footer p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    font-weight: 400;
+}
+
+/* Стили для блока с иконками социальных сетей */
+footer .socials {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Стили для иконок социальных сетей */
+footer .social-icon {
+    font-size: 24px;
+    color: #fff;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+footer .social-icon:hover {
+    color: #4CAF50; /* Зеленый цвет при наведении */
+    transform: scale(1.1); /* Легкое увеличение при наведении */
+}
+
+/* Индивидуальные стили для каждой социальной сети */
+footer .facebook:hover {
+    color: #3b5998; /* Цвет для Facebook */
+}
+
+footer .instagram:hover {
+    color: #e4405f; /* Цвет для Instagram */
+}
+
+footer .telegram:hover {
+    color: #0088cc; /* Цвет для Telegram */
+}
+
+
