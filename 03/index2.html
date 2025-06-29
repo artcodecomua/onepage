@@ -55,7 +55,7 @@
 <section class="bg-gray-50 py-24" id="hero">
   <div class="container mx-auto px-6 text-center" data-aos="fade-up">
     <h1 class="text-4xl md:text-5xl font-extrabold mb-6 leading-tight">
-      Мы помогаем брендам <span class="text-blue-600">расти</span> и <span class="text-blue-600">продавать</span> через цифровой маркетинг
+      Мы помогаем брендам <span class="text-blue-600">расти</span> и <span class="text-blue-600">продавать</span> через маркетинг
     </h1>
     <p class="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
       Комплексные стратегии, SMM, реклама, брендинг и сайты — всё, что нужно для роста вашего бизнеса.
@@ -113,47 +113,85 @@
   </div>
 </section>
 
-  <!-- Команда -->
-  <section id="team" class="py-20">
-    <div class="container mx-auto px-6">
-      <h2 class="text-3xl font-bold text-center mb-12">Наша команда</h2>
-      <div class="grid md:grid-cols-3 gap-8 text-center">
-        <div>
-          <img src="https://via.placeholder.com/150" alt="CEO" class="rounded-full mx-auto mb-4" />
-          <h3 class="font-semibold text-lg">Екатерина Иванова</h3>
-          <p class="text-sm text-gray-600">Основатель и стратег</p>
-        </div>
-        <div>
-          <img src="https://via.placeholder.com/150" alt="SMM" class="rounded-full mx-auto mb-4" />
-          <h3 class="font-semibold text-lg">Дмитрий Ковалев</h3>
-          <p class="text-sm text-gray-600">Руководитель SMM-направления</p>
-        </div>
-        <div>
-          <img src="https://via.placeholder.com/150" alt="Designer" class="rounded-full mx-auto mb-4" />
-          <h3 class="font-semibold text-lg">Анна Морозова</h3>
-          <p class="text-sm text-gray-600">Креативный дизайнер</p>
-        </div>
+<!-- ✉️ Контакт / Форма -->
+<section id="contact" class="bg-blue-600 py-24 text-white text-center">
+  <div class="container mx-auto px-6 max-w-xl" data-aos="fade-up">
+    <h2 class="text-3xl font-bold mb-4">Оставьте заявку</h2>
+    <p class="mb-8 text-lg">Мы свяжемся с вами в течение 24 часов и предложим лучшее решение.</p>
+
+    <form action="https://formsubmit.io/send/youremail@example.com" method="POST" class="space-y-6 text-left">
+      <input type="hidden" name="_redirect" value="https://marketa.agency/thank-you.html" />
+      <input type="text" name="name" placeholder="Ваше имя" required class="w-full px-4 py-3 rounded text-black" />
+      <input type="email" name="email" placeholder="Email" required class="w-full px-4 py-3 rounded text-black" />
+      <textarea name="message" rows="4" placeholder="Сообщение" required class="w-full px-4 py-3 rounded text-black"></textarea>
+      <button type="submit" class="w-full bg-white text-blue-600 font-semibold py-3 rounded hover:bg-gray-200 transition">Отправить</button>
+    </form>
+  </div>
+</section>
+
+<!-- 👥 Команда -->
+<section id="team" class="py-24 bg-white">
+  <div class="container mx-auto px-6">
+    <h2 class="text-3xl font-bold text-center mb-16" data-aos="fade-up">Наша команда</h2>
+    <div class="grid md:grid-cols-3 gap-12 text-center">
+
+      <div data-aos="fade-up" data-aos-delay="100">
+        <img src="https://via.placeholder.com/150" alt="CEO" class="rounded-full mx-auto mb-4" loading="lazy">
+        <h3 class="font-semibold text-lg">Екатерина Иванова</h3>
+        <p class="text-sm text-gray-600">Основатель и стратег</p>
       </div>
-    </div>
-  </section>
 
-  <!-- CTA -->
-  <section id="contact" class="bg-blue-600 py-20 text-white text-center">
-    <div class="container mx-auto px-6">
-      <h2 class="text-3xl font-bold mb-4">Готовы к росту вашего бизнеса?</h2>
-      <p class="mb-8 text-lg">Напишите нам о своей задаче, давайте обсудим и мы предложим оптимальное решение.</p>
-      <a href="mailto:info@market.agency" class="bg-white text-blue-600 px-6 py-3 rounded font-semibold hover:bg-gray-100">Написать нам</a>
-    </div>
-  </section>
+      <div data-aos="fade-up" data-aos-delay="200">
+        <img src="https://via.placeholder.com/150" alt="SMM" class="rounded-full mx-auto mb-4" loading="lazy">
+        <h3 class="font-semibold text-lg">Дмитрий Ковалев</h3>
+        <p class="text-sm text-gray-600">Руководитель SMM-направления</p>
+      </div>
 
-  <!-- Подвал -->
-  <footer class="bg-gray-900 text-gray-300 py-10">
-    <div class="container mx-auto px-6 text-center">
-      <div class="mb-4">© 2025 MARKET. Все права защищены.</div>
-      <div class="text-sm">Харьков, ул.Примерная, 10 · hello@market.agency</div>
+      <div data-aos="fade-up" data-aos-delay="300">
+        <img src="https://via.placeholder.com/150" alt="Designer" class="rounded-full mx-auto mb-4" loading="lazy">
+        <h3 class="font-semibold text-lg">Анна Морозова</h3>
+        <p class="text-sm text-gray-600">Креативный дизайнер</p>
+      </div>
+
     </div>
-  </footer>
+  </div>
+</section>
+
+<!-- 🔚 Подвал -->
+<footer class="bg-gray-900 text-gray-300 py-12">
+  <div class="container mx-auto px-6 text-center">
+    <div class="mb-4 font-semibold text-white">© 2025 MARKET</div>
+    <div class="text-sm">Харьков, ул.Примерная, 10 • <a href="mailto:info@market.agency" class="underline">info@market.agency</a></div>
+    <div class="mt-4 text-xs text-gray-500">Сделано с ♥ командой MARKET</div>
+  </div>
+</footer>
+
+<!-- AOS INIT -->
+<script>
+  AOS.init({
+    duration: 800,
+    once: true
+  });
+</script>
+
+<!-- 🧩 amoCRM Webhook Integration (пример) -->
+<!-- Замените URL на ваш серверный обработчик или webhook CRM -->
+<!--
+<script>
+  document.querySelector('form').addEventListener('submit', function (e) {
+    fetch("https://your-crm-endpoint.com/api/lead", {
+      method: "POST",
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        name: this.name.value,
+        email: this.email.value,
+        message: this.message.value,
+        utm_source: "website"
+      })
+    });
+  });
+</script>
+-->
 
 </body>
 </html>
-

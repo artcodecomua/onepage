@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MARKETA — маркетинговое агентство</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+  </style>
+</head>
+<body class="bg-white text-gray-800">
+
+  <!-- Шапка -->
+  <header class="bg-white shadow-md sticky top-0 z-50">
+    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+      <div class="text-2xl font-extrabold text-blue-600">MARKETA</div>
+      <nav class="space-x-6 hidden md:flex">
+        <a href="#services" class="hover:text-blue-600">Услуги</a>
+        <a href="#cases" class="hover:text-blue-600">Кейсы</a>
+        <a href="#team" class="hover:text-blue-600">Команда</a>
+        <a href="#contact" class="hover:text-blue-600">Контакты</a>
+      </nav>
+      <a href="#contact" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 text-sm hidden md:inline-block">Записаться на консультацию</a>
+    </div>
+  </header>
+
+  <!-- Hero / УТП -->
+  <section class="bg-gray-50 py-20">
+    <div class="container mx-auto px-6 text-center">
+      <h1 class="text-4xl md:text-5xl font-extrabold mb-6 leading-tight">
+        Мы помогаем брендам <span class="text-blue-600">расти</span> и <span class="text-blue-600">продавать</span> через цифровой маркетинг
+      </h1>
+      <p class="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
+        Комплексные маркетинговые стратегии, запуск рекламы, SMM, дизайн и веб-разработка — всё, чтобы ваш бизнес выделялся.
+      </p>
+      <a href="#contact" class="bg-blue-600 text-white px-8 py-4 rounded font-semibold hover:bg-blue-700 text-lg">Получить консультацию</a>
+    </div>
+  </section>
+
+  <!-- Услуги -->
+  <section id="services" class="py-20">
+    <div class="container mx-auto px-6">
+      <h2 class="text-3xl font-bold text-center mb-12">Наши услуги</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="p-6 bg-white shadow rounded">
+          <h3 class="text-xl font-semibold mb-2">Контекстная и таргетированная реклама</h3>
+          <p class="text-gray-600">Настраиваем рекламные кампании, которые приносят заявки уже в первые дни.</p>
+        </div>
+        <div class="p-6 bg-white shadow rounded">
+          <h3 class="text-xl font-semibold mb-2">SMM и контент-маркетинг</h3>
+          <p class="text-gray-600">Создаём визуал, пишем тексты, привлекаем аудиторию и превращаем подписчиков в клиентов.</p>
+        </div>
+        <div class="p-6 bg-white shadow rounded">
+          <h3 class="text-xl font-semibold mb-2">Брендинг и дизайн</h3>
+          <p class="text-gray-600">Разрабатываем фирменный стиль, логотипы и дизайн, который запоминается.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Кейсы -->
+  <section id="cases" class="bg-gray-50 py-20">
+    <div class="container mx-auto px-6">
+      <h2 class="text-3xl font-bold text-center mb-12">Наши кейсы</h2>
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="bg-white p-6 rounded shadow">
+          <h3 class="text-xl font-semibold mb-2">+300% заявок за 2 месяца</h3>
+          <p class="text-gray-600">Для онлайн-школы мы внедрили автоворонку и настроили рекламу в Instagram. Результат: 4-кратный рост прибыли.</p>
+        </div>
+        <div class="bg-white p-6 rounded shadow">
+          <h3 class="text-xl font-semibold mb-2">Ребрендинг для IT-компании</h3>
+          <p class="text-gray-600">Полностью обновили фирменный стиль и разработали презентации для инвесторов.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Команда -->
+  <section id="team" class="py-20">
+    <div class="container mx-auto px-6">
+      <h2 class="text-3xl font-bold text-center mb-12">Наша команда</h2>
+      <div class="grid md:grid-cols-3 gap-8 text-center">
+        <div>
+          <img src="https://via.placeholder.com/150" alt="CEO" class="rounded-full mx-auto mb-4" />
+          <h3 class="font-semibold text-lg">Екатерина Иванова</h3>
+          <p class="text-sm text-gray-600">Основатель и стратег</p>
+        </div>
+        <div>
+          <img src="https://via.placeholder.com/150" alt="SMM" class="rounded-full mx-auto mb-4" />
+          <h3 class="font-semibold text-lg">Дмитрий Ковалев</h3>
+          <p class="text-sm text-gray-600">Руководитель SMM-направления</p>
+        </div>
+        <div>
+          <img src="https://via.placeholder.com/150" alt="Designer" class="rounded-full mx-auto mb-4" />
+          <h3 class="font-semibold text-lg">Анна Морозова</h3>
+          <p class="text-sm text-gray-600">Креативный дизайнер</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section id="contact" class="bg-blue-600 py-20 text-white text-center">
+    <div class="container mx-auto px-6">
+      <h2 class="text-3xl font-bold mb-4">Готовы к росту вашего бизнеса?</h2>
+      <p class="mb-8 text-lg">Заполните форму, и мы свяжемся с вами в течение 24 часов.</p>
+      <a href="mailto:hello@marketa.agency" class="bg-white text-blue-600 px-6 py-3 rounded font-semibold hover:bg-gray-100">Написать нам</a>
+    </div>
+  </section>
+
+  <!-- Подвал -->
+  <footer class="bg-gray-900 text-gray-300 py-10">
+    <div class="container mx-auto px-6 text-center">
+      <div class="mb-4">© 2025 MARKET. Все права защищены.</div>
+      <div class="text-sm">Харьков, ул.Примерная, 10 · hello@market.agency</div>
+    </div>
+  </footer>
+
+</body>
+</html>
+
