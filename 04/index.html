@@ -1,1 +1,609 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="content-language" content="uk-UA">
+    <title>Мой бизнес - мой Telegram канал</title>
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <style>
+        /* CSS Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto', 'Arial', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #0c1e3e 0%, #1a4886 50%, #3498db 100%);
+            color: #fff;
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header Styles */
+        header {
+            padding: 20px 0;
+            background-color: rgba(0, 0, 0, 0.2);
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: 700;
+            color: #fff;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo i, .logo .icon-fallback {
+            margin-right: 10px;
+            color: #61a9ff;
+        }
+
+        /* Упрощенные стили кнопок */
+        .button {
+            display: inline-block;
+            background-color: #2196F3;
+            color: white !important;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none !important;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(33, 150, 243, 0.3);
+        }
+
+        .button:hover {
+            background-color: #0d8bf2;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(33, 150, 243, 0.4);
+        }
+
+        .button i, .button .icon-fallback {
+            margin-right: 8px;
+        }
+
+        .button.large {
+            padding: 15px 30px;
+            font-size: 18px;
+            box-shadow: 0 8px 25px rgba(33, 150, 243, 0.4);
+        }
+
+        .button.large:hover {
+            box-shadow: 0 12px 30px rgba(33, 150, 243, 0.5);
+        }
+
+        .button.large i, .button.large .icon-fallback {
+            font-size: 22px;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 160px 0 100px;
+            text-align: center;
+/*
+background: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxkZWZzPjxwYXR0ZXJuIGlkPSJwYXR0ZXJuIiB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiIHBhdHRlcm5UcmFuc2Zvcm09InJvdGF0ZSg0NSkiPjxyZWN0IHdpZHRoPSIyIiBoZWlnaHQ9IjIiIGZpbGw9InJnYmEoMjU1LCAyNTUsIDI1NSwgMC4wNSkiLz48L3BhdHRlcm4+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjcGF0dGVybikiLz48L3N2Zz4=');
+            position: relative;
+            overflow: hidden;
+*/
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at center, rgba(97, 169, 255, 0.1) 0%, rgba(12, 30, 62, 0) 70%);
+        }
+
+        .hero h1 {
+            font-size: 60px;
+            margin-bottom: 10px;
+            font-weight: 800;
+            background: linear-gradient(to right, #fff, #61a9ff);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            display: inline-block;
+        }
+
+        .hero h2 {
+            font-size: 36px;
+            margin-bottom: 30px;
+            color: #61a9ff;
+            font-weight: 600;
+        }
+
+        .hero-description {
+            max-width: 800px;
+            margin: 0 auto 40px;
+            font-size: 20px;
+            color: rgba(255, 255, 255, 0.9);
+            line-height: 1.6;
+        }
+
+        /* Floating Elements */
+        .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+
+        @keyframes floating {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0px); }
+        }
+
+        /* About Section */
+        .about {
+            padding: 100px 0;
+            background-color: rgba(255, 255, 255, 0.03);
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 60px;
+            position: relative;
+            color: #fff;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: #2196F3;
+            margin: 15px auto 0;
+            border-radius: 2px;
+        }
+
+        .features {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        .feature-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            padding: 30px;
+            flex: 1 1 300px;
+            max-width: 350px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+        }
+
+        .feature-icon {
+            font-size: 40px;
+            color: #61a9ff;
+            margin-bottom: 20px;
+        }
+
+        .feature-title {
+            font-size: 22px;
+            margin-bottom: 15px;
+            color: #fff;
+        }
+
+        .feature-description {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 16px;
+        }
+
+        /* Testimonials Section */
+        .testimonials {
+            padding: 100px 0;
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .testimonial-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            padding: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: transform 0.3s ease;
+            position: relative;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .testimonial-text {
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+        }
+
+        .author-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: #2196F3;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            margin-right: 15px;
+        }
+
+        .author-info {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .author-name {
+            font-weight: 600;
+            color: #fff;
+            font-size: 18px;
+        }
+
+        .author-role {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 14px;
+        }
+
+        .stars {
+            color: #FFD700;
+            font-size: 18px;
+            margin-top: 5px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: rgba(0, 0, 0, 0.3);
+            padding: 30px 0;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .footer-logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+        }
+
+        .footer-logo i, .footer-logo .icon-fallback {
+            margin-right: 10px;
+            color: #61a9ff;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .footer-link {
+            color: rgba(255, 255, 255, 0.7);
+            margin: 0 15px;
+            transition: color 0.3s ease;
+            text-decoration: none;
+        }
+
+        .footer-link:hover {
+            color: #2196F3;
+        }
+
+        .copyright {
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 14px;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .animate {
+            opacity: 0;
+            animation: fadeIn 0.8s forwards;
+        }
+
+        .delay-1 { animation-delay: 0.2s; }
+        .delay-2 { animation-delay: 0.4s; }
+        .delay-3 { animation-delay: 0.6s; }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .hero {
+                padding: 120px 0 80px;
+            }
+
+            .hero h1 {
+                font-size: 40px;
+            }
+
+            .hero h2 {
+                font-size: 24px;
+            }
+
+            .hero-description {
+                font-size: 18px;
+                padding: 0 20px;
+            }
+
+            .section-title {
+                font-size: 30px;
+            }
+
+            .testimonial-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .feature-card {
+                max-width: 100%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header-content {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .hero h2 {
+                font-size: 20px;
+            }
+
+            .button.large {
+                padding: 12px 25px;
+                font-size: 16px;
+            }
+
+            .button {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+
+        /* Fallback и вспомогательные стили */
+        .icon-fallback {
+            display: inline-block;
+        }
+
+        .fa-fallback {
+            display: none;
+        }
+
+        /* Для случаев, когда Font Awesome не загрузился */
+        .fontawesome-error .fa-fallback {
+            display: inline-block;
+        }
+
+        .fontawesome-error .fas, 
+        .fontawesome-error .fab {
+            display: none;
+        }
+
+        /* Дополнительные стили для надежного отображения */
+        .subscribe-button-container {
+            display: block;
+            margin: 0 auto;
+            text-align: center;
+            clear: both;
+            padding: 10px 0;
+        }
+    </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="header-content">
+        <a href="#" class="logo"><i class="fas fa-chart-line"></i><span class="fa-fallback">📈</span>Мой бизнес</a>
+<!--        <a href="https://t.me/businessgroupua" class="button"><i class="fab fa-telegram"></i><span class="fa-fallback">✉️</span>Подписаться</a> -->
+      </div>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <h1 class="animate">Мой бизнес</h1>
+      <h2 class="animate delay-1">Краткое описание</h2>
+      <p class="hero-description animate delay-2">Добро пожаловать на наш сайт! Здесь будет размещён основной текст, описывающий вашу компанию, услуги или продукцию.</p>
+      <div class="subscribe-button-container animate delay-3">
+        <a href="https://t.me/businessgroupua" class="button large floating"><i class="fab fa-telegram"></i><span class="fa-fallback">✉️</span>Подписаться на канал</a>
+      </div>
+    </div>
+  </section>
+
+    <section class="about">
+        <div class="container">
+            <h2 class="section-title">Наши услуги</h2>
+            <div class="features">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-rocket"></i>
+                        <span class="fa-fallback">🚀</span>
+                    </div>
+                    <h3 class="feature-title">Услуга 1</h3>
+                    <p class="feature-description">Текст заглушка используется для заполнения макета или страницы сайта, пока готовый контент находится в разработке.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-pie"></i>
+                        <span class="fa-fallback">📊</span>
+                    </div>
+                    <h3 class="feature-title">Услуга 2</h3>
+                    <p class="feature-description">Этот текст не имеет смысла и предназначен только для визуального восприятия дизайна.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-users"></i>
+                        <span class="fa-fallback">👥</span>
+                    </div>
+                    <h3 class="feature-title">Услуга 3</h3>
+                    <p class="feature-description">Здесь будет настоящий контент, когда сайт будет готов к запуску.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="section-title">Наши товары</h2>
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-author">
+                        <div class="author-avatar">1</div>
+                        <div class="author-info">
+                            <div class="author-name">Название</div>
+                            <div class="author-role">подзаголовок</div>
+                        </div>
+                    </div>
+                    <p class="testimonial-text">Текст заглушка используется для заполнения макета или страницы сайта, пока готовый контент находится в разработке. Этот текст не имеет смысла и предназначен только для визуального восприятия дизайна.</p>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-author">
+                        <div class="author-avatar">2</div>
+                        <div class="author-info">
+                            <div class="author-name">Название</div>
+                            <div class="author-role">подзаголовок</div>
+                        </div>
+                    </div>
+                    <p class="testimonial-text">Текст заглушка используется для заполнения макета или страницы сайта, пока готовый контент находится в разработке. Этот текст не имеет смысла и предназначен только для визуального восприятия дизайна.</p>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-author">
+                        <div class="author-avatar">3</div>
+                        <div class="author-info">
+                            <div class="author-name">Название</div>
+                            <div class="author-role">подзаголовок</div>
+                        </div>
+                    </div>
+                    <p class="testimonial-text">Текст заглушка используется для заполнения макета или страницы сайта, пока готовый контент находится в разработке. Этот текст не имеет смысла и предназначен только для визуального восприятия дизайна.</p>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-author">
+                        <div class="author-avatar">4</div>
+                        <div class="author-info">
+                            <div class="author-name">Название</div>
+                            <div class="author-role">подзаголовок</div>
+                        </div>
+                    </div>
+                    <p class="testimonial-text">Текст заглушка используется для заполнения макета или страницы сайта, пока готовый контент находится в разработке. Этот текст не имеет смысла и предназначен только для визуального восприятия дизайна.</p>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-author">
+                        <div class="author-avatar">5</div>
+                        <div class="author-info">
+                            <div class="author-name">Название</div>
+                            <div class="author-role">подзаголовок</div>
+                        </div>
+                    </div>
+                    <p class="testimonial-text">Текст заглушка используется для заполнения макета или страницы сайта, пока готовый контент находится в разработке. Этот текст не имеет смысла и предназначен только для визуального восприятия дизайна.</p>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-author">
+                        <div class="author-avatar">6</div>
+                        <div class="author-info">
+                            <div class="author-name">Название</div>
+                            <div class="author-role">подзаголовок</div>
+                        </div>
+                    </div>
+                    <p class="testimonial-text">Текст заглушка используется для заполнения макета или страницы сайта, пока готовый контент находится в разработке. Этот текст не имеет смысла и предназначен только для визуального восприятия дизайна.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <i class="fas fa-chart-line"></i>
+                    <span class="fa-fallback">📈</span>
+                    Мой бизнес
+                </div>
+                <div class="footer-links">
+                    <a href="#" class="footer-link">Главная</a>
+                    <a href="#" class="footer-link">Наши услуги</a>
+                    <a href="#" class="footer-link">Наши товары</a>
+                </div>
+                <div class="copyright">© Мой бизнес 2025</div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Animate elements when they come into view
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initial animations are handled by CSS
+
+            // Smooth scroll for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+
+                    document.querySelector(targetId).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
