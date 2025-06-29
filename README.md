@@ -11,13 +11,6 @@
 
 <p>Шаблон одностраничника ... https://artcodecomua.github.io/onepage/03 ...</p>
 
-<p>SEO оптимизации одностраничника https://artcodecomua.github.io/onepage/seo - верстка с использованием JavaScript и метода PushState.</p>
-
-Пример по ссылке [https://artcodecomua.github.io/onepage/seo](https://artcodecomua.github.io/onepage/seo) - у этого одностраничника каждый блок имеет свой URL и Title.
-
-![preview img](/preview.png)
-
-
 
 <h2>Сайт из шаблона</h2>
 
@@ -32,3 +25,10 @@
 Подробнее про одностраничные сайты и их разработку можно почитать [https://artcode.com.ua/business/onepage](https://artcode.com.ua/business/onepage)
 
 Продвижение одностраничного сайта [https://artcode.com.ua/blog/prodvizenie-odnostranicnogo-saita](https://artcode.com.ua/blog/prodvizenie-odnostranicnogo-saita)
+
+# <p>SEO оптимизации одностраничника https://artcodecomua.github.io/onepage/seo - верстка с использованием JavaScript и метода PushState.</p>
+
+# Пример по ссылке [https://artcodecomua.github.io/onepage/seo](https://artcodecomua.github.io/onepage/seo) - у этого одностраничника каждый блок имеет свой URL и Title.
+
+# ![preview img](/preview.png)
+
