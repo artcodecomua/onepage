@@ -26,9 +26,10 @@
 
 Продвижение одностраничного сайта [https://artcode.com.ua/blog/prodvizenie-odnostranicnogo-saita](https://artcode.com.ua/blog/prodvizenie-odnostranicnogo-saita)
 
-# <p>SEO оптимизации одностраничника https://artcodecomua.github.io/onepage/seo - верстка с использованием JavaScript и метода PushState.</p>
+/**
+<p>SEO оптимизации одностраничника https://artcodecomua.github.io/onepage/seo - верстка с использованием JavaScript и метода PushState.</p>
 
-# Пример по ссылке [https://artcodecomua.github.io/onepage/seo](https://artcodecomua.github.io/onepage/seo) - у этого одностраничника каждый блок имеет свой URL и Title.
+Пример по ссылке [https://artcodecomua.github.io/onepage/seo](https://artcodecomua.github.io/onepage/seo) - у этого одностраничника каждый блок имеет свой URL и Title.
 
-# ![preview img](/preview.png)
-
+![preview img](/preview.png)
+*/
