@@ -5,11 +5,13 @@
 
 <h2>Шаблоны одностраничников</h2>
 
-<p>Базовый шаблон одностраничника https://artcodecomua.github.io/onepage/01 - типичный шаблон, минимальная верстка.</p>
+<p>Шаблон одностраничника https://artcodecomua.github.io/onepage/01 - типичный шаблон черновик, минимальная верстка.</p>
 
-<p>Шаблон одностраничника ... https://artcodecomua.github.io/onepage/02 ...</p>
+<p>Шаблон одностраничника https://artcodecomua.github.io/onepage/02 - шаблон "зеленый"</p>
 
-<p>Шаблон одностраничника ... https://artcodecomua.github.io/onepage/03 ...</p>
+<p>Шаблон одностраничника https://artcodecomua.github.io/onepage/03 - деловой шаблон</p>
+
+<p>Шаблон одностраничника https://artcodecomua.github.io/onepage/04 - промо шаблон</p>
 
 
 <h2>Сайт из шаблона</h2>
@@ -18,9 +20,6 @@
 
 
 <h2>SEO оптимизация одностраничника</h2>
-
-<p>Продвижение одностраничного сайта https://artcode.com.ua/blog/prodvizenie-odnostranicnogo-saita</p>
-
 
 Подробнее про одностраничные сайты и их разработку можно почитать [https://artcode.com.ua/business/onepage](https://artcode.com.ua/business/onepage)
 
