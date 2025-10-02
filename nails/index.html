@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Мастер маникюра Анна Nails</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      background: #fdfcfd;
+      color: #2c2c2c;
+    }
+    a { color: #b8005a; text-decoration: none; }
+    .container { max-width: 960px; margin: auto; padding: 20px; }
+    header {
+      background: #c27ba0;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+    }
+    header h1 { font-size: 2em; margin-bottom: 5px; }
+    header p { font-size: 1.1em; }
+
+    .hero {
+      background: linear-gradient(to bottom, rgba(255,240,245,0.95), rgba(255,240,245,0.95)), url('hero-nails.jpg') no-repeat center/cover;
+      color: #4a2c2c;
+      text-align: center;
+      padding: 80px 20px;
+    }
+    .hero h2 {
+      font-size: 2em;
+      margin-bottom: 10px;
+    }
+    .hero p {
+      font-size: 1.2em;
+      max-width: 700px;
+      margin: auto;
+    }
+
+    h2, h3 {
+      margin: 30px 0 15px;
+      color: #b8005a;
+    }
+
+    .price-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      background: white;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+    .price-table th, .price-table td {
+      border: 1px solid #eee;
+      padding: 12px;
+      text-align: left;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 10px;
+      margin: 20px 0;
+    }
+    .gallery img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    .faq, .reviews, .map, .bonus {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      margin-bottom: 30px;
+    }
+
+    .faq-item, .review-item { margin-bottom: 20px; }
+
+    .review-item {
+      background: #fff3f7;
+      padding: 15px;
+      border-left: 4px solid #b8005a;
+      border-radius: 6px;
+    }
+
+    .map img { border-radius: 10px; }
+
+    .messengers {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin: 30px 0;
+      flex-wrap: wrap;
+    }
+    .messengers a {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 30px;
+      font-weight: bold;
+      text-decoration: none;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.2s;
+    }
+    .messengers a:hover {
+      transform: scale(1.05);
+    }
+    .viber { background-color: #665cac; }
+    .whatsapp { background-color: #25d366; }
+    .telegram { background-color: #229ed9; }
+
+    footer {
+      background: #c27ba0;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+
+    .social-icons {
+      text-align: center;
+      margin: 20px 0;
+    }
+    .social-icons a {
+      color: #c27ba0;
+      margin: 0 10px;
+      font-size: 24px;
+      transition: color 0.3s;
+    }
+    .social-icons a:hover {
+      color: #b8005a;
+    }
+
+    @media (max-width: 600px) {
+      header h1 { font-size: 1.5em; }
+      .hero h2 { font-size: 1.5em; }
+      .hero p { font-size: 1em; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Анна Nails</h1>
+    <p>Профессиональный мастер маникюра в Харькове</p>
+  </header>
+
+  <section class="hero">
+    <h2>Идеальный маникюр — это просто</h2>
+    <p>Уютная студия, стерильные инструменты, большой выбор дизайнов и покрытий. Запишитесь сегодня и почувствуйте заботу о себе с первых минут.</p>
+  </section>
+
+  <div class="container">
+    <div class="messengers">
+      <a class="viber" href="viber://chat?number=%2B380500000000"><i class="fab fa-viber"></i> Viber</a>
+      <a class="whatsapp" href="https://wa.me/380500000000"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+      <a class="telegram" href="https://t.me/username"><i class="fab fa-telegram"></i> Telegram</a>
+    </div>
+
+    <section>
+      <h2>Прайс-лист</h2>
+      <table class="price-table">
+        <tr><th>Услуга</th><th>Цена</th></tr>
+        <tr><td>Маникюр с покрытием гель-лаком</td><td>350 грн</td></tr>
+        <tr><td>Маникюр без покрытия</td><td>200 грн</td></tr>
+        <tr><td>Укрепление ногтей</td><td>100 грн</td></tr>
+        <tr><td>Снятие гель-лака</td><td>80 грн</td></tr>
+        <tr><td>Дизайн (1–4 ногтя)</td><td>от 50 грн</td></tr>
+      </table>
+    </section>
+
+    <section>
+      <h2>Галерея работ</h2>
+      <div class="gallery">
+        <img src="01.jpg" alt="Маникюр 1">
+        <img src="02.jpg" alt="Маникюр 2">
+        <img src="03.jpg" alt="Маникюр 3">
+      </div>
+    </section>
+
+    <section class="faq">
+      <h2>Часто задаваемые вопросы</h2>
+      <div class="faq-item">
+        <strong>Сколько времени занимает маникюр?</strong>
+        <p>Около 1,5–2 часов в зависимости от дизайна.</p>
+      </div>
+      <div class="faq-item">
+        <strong>Какие бренды используете?</strong>
+        <p>Kodi, Luxio, Komilfo, PNB — только сертифицированные материалы.</p>
+      </div>
+      <div class="faq-item">
+        <strong>Можно ли записаться через мессенджер?</strong>
+        <p>Да, пишите в Telegram или Viber по номеру 050 000 00 00.</p>
+      </div>
+    </section>
+
+    <section class="reviews">
+      <h2>Отзывы клиентов</h2>
+      <div class="review-item">
+        <p><strong>Ольга:</strong> Очень аккуратная работа, маникюр держится 3 недели!</p>
+      </div>
+      <div class="review-item">
+        <p><strong>Кристина:</strong> Большой выбор цветов и уютная атмосфера, рекомендую!</p>
+      </div>
+    </section>
+
+    <section class="map">
+      <h2>Как добраться</h2>
+      <p>Моя студия находится в районе м. Студенческая. Есть парковка и удобный подъезд.</p>
+      <img src="map-placeholder.jpg" alt="Карта проезда" style="width:100%; max-width: 600px;">
+    </section>
+
+    <section class="bonus">
+      <h3>🎁 Подарок новой клиентке — масло для кутикулы!</h3>
+    </section>
+
+    <div class="social-icons">
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-tiktok"></i></a>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Анна Nails — Маникюр в Харькове | Все права защищены</p>
+  </footer>
+</body>
+</html>
+
