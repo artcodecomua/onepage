@@ -13,7 +13,9 @@
 
 <p>Шаблон "промо" https://artcodecomua.github.io/onepage/04</p>
 
-<p>Шаблон beauty мастера маникюра https://artcodecomua.github.io/onepage/nails</p>
+<p>Шаблон сайта мастера маникюра https://artcodecomua.github.io/onepage/nails</p>
+
+<p>Шаблон beauty мастера https://artcodecomua.github.io/onepage/beauty</p>
 
 
 <h2>Сайт из шаблона</h2>
